@@ -9,7 +9,7 @@ echo "BUILD STAGE 1 -- Removing KDE Plasma Desktop..."
 dnf5 -y group remove "KDE Plasma Desktop"
 
 echo "BUILD STAGE -- Removing KDE-related packages and dependencies..."
-dnf5 -y remove kf5-* kf6-* plasma-* plasma-login-manager breeze-* --skip-unavailable --allow-erasing
+dnf5 -y remove kf5-* kf6-* plasma-* plasma-login-manager breeze-*
 dnf5 -y autoremove
 
 # Clean up configuration files
