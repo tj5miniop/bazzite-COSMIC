@@ -25,3 +25,7 @@ dnf5 -y install cosmic-applets cosmic-bg cosmic-comp cosmic-idle cosmic-launcher
 
 # Install Global Configuration for COSMIC
 cp -r /ctx/system-files/* / 
+
+# enable LY 
+dnf5 -y install ly
+systemctl enable ly@tty1.service
