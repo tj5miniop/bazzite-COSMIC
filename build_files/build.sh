@@ -39,7 +39,7 @@ dnf5 -y copr enable faugus/faugus-launcher
 dnf5 -y install faugus-launcher
 # Brvae Browser
 dnf5 -y install dnf-plugins-core
-dnf5 -y config-manager --add-repo https://brave-browser-rpm-nightly.s3.brave.com/brave-browser-nightly.repo
+dnf -y config-manager --add-repo https://brave-browser-rpm-nightly.s3.brave.com/brave-browser-nightly.repo
 dnf5 -y install brave-origin-nightly
 
 # Cleanup section
