@@ -30,3 +30,19 @@ cp -r /ctx/system-files/* /
 # enable LY 
 dnf5 -y install ly
 systemctl enable ly@tty1.service
+
+# Remove and install applications, custom configuration
+dnf5 -y remove lutris krfb waydroid
+
+# Install Extra Stuff
+dnf5 -y copr enable faugus/faugus-launcher
+dnf5 -y install faugus-launcher
+# Helium Browser
+dnf5 -y copr enable imput/helium
+dnf5 -y install helium-bin
+
+# Cleanup section
+# DNF Cleanup
+dnf5 -y clean all
+echo 'Done Building!'
+
