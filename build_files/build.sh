@@ -37,9 +37,10 @@ dnf5 -y remove lutris krfb waydroid
 # Install Extra Stuff
 dnf5 -y copr enable faugus/faugus-launcher
 dnf5 -y install faugus-launcher
-# Helium Browser
-dnf5 -y copr enable imput/helium
-dnf5 -y install helium-bin
+# Brvae Browser
+dnf5 -y install dnf-plugins-core
+dnf5 -y config-manager --add-repo https://brave-browser-rpm-nightly.s3.brave.com/brave-browser-nightly.repo
+dnf5 -y install brave-origin-nightly
 
 # Cleanup section
 # DNF Cleanup
