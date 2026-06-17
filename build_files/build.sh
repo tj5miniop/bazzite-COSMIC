@@ -37,10 +37,12 @@ dnf5 -y remove lutris krfb waydroid
 # Install Extra Stuff
 dnf5 -y copr enable faugus/faugus-launcher
 dnf5 -y install faugus-launcher
-# Brvae Browser
+# Librewolf Browser
 dnf5 -y install dnf-plugins-core
-dnf -y config-manager --add-repo https://brave-browser-rpm-nightly.s3.brave.com/brave-browser-nightly.repo
-dnf5 -y install brave-origin-nightly
+#add the repo
+sudo dnf config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
+# install the package
+sudo dnf -y install librewolf
 
 # Cleanup section
 # DNF Cleanup
