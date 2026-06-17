@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # KDE Plasma Removal Script & Build script for Bazzite-Minimal - Created by tj5miniop
 set -ouex pipefail
 
@@ -21,10 +20,12 @@ dnf5 -y install NetworkManager
 
 # install minimal COSMIC Desktop environment
 echo "BUILD STAGE 3 -- Desktop Configuration..."
-dnf5 -y install cosmic-applets cosmic-bg cosmic-comp cosmic-idle cosmic-launcher cosmic-notifications cosmic-osd cosmic-panel cosmic-workspaces cosmic-icon-theme cosmic-settings-daemon xdg-desktop-portal-cosmic xdg-desktop-portal-cosmic
+dnf5 -y install cosmic-session cosmic-applets cosmic-bg cosmic-comp cosmic-idle cosmic-launcher \
+cosmic-notifications cosmic-osd cosmic-panel cosmic-workspaces cosmic-icon-theme \
+cosmic-settings-daemon xdg-desktop-portal-cosmic cosmic-initial-setup
 
 # Install Global Configuration for COSMIC
-cp -r /ctx/system-files/* / 
+cp -r /ctx/system-files/* /
 
 # enable LY 
 dnf5 -y install ly
