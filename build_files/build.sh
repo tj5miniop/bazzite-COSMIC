@@ -40,9 +40,9 @@ dnf5 -y install faugus-launcher
 # Librewolf Browser
 dnf5 -y install dnf-plugins-core
 #add the repo
-sudo dnf config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
+dnf config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
 # install the package
-sudo dnf -y install librewolf
+dnf -y install librewolf
 
 # Cleanup section
 # DNF Cleanup
